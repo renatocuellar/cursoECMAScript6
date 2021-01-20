@@ -200,3 +200,68 @@ helloPromise()
    console.log('generatorHello first call -> ', generatorHello.next().value);
    console.log('generatorHello second call -> ', generatorHello.next().value);
    console.log('generatorHello third call -> ', generatorHello.next().value);
+
+
+
+   /**
+ * Includes (averiguar si un valor se incluye en el arreglo) desde ES7
+ */
+let numbers = [1, 2, 3, 7, 8];
+const VALUE = 7;
+
+if (numbers.includes(VALUE)) {
+  console.log(`Sí se encuentra el valor ${VALUE}`);
+} else {
+  console.log(`No se encuentra el valor ${VALUE}`);
+}
+
+/**
+ * Potencia, ahora se ñadieron las potenias como operador aritmetico
+ */
+let base = 4;
+let exponent = 4;
+let result = base ** exponent;
+console.log(`Result -> ${result}`);
+
+//ES8 (ECMA SCRIPT 8)
+
+
+//Object entries deveule los valores de una matriz.
+
+const data ={
+    front:'Alej',
+    back: 'Rel'
+};
+
+//Tranformar este objeto en una matriz. 
+const entries =Object.entries(data);
+console.log(entries);
+//Si queremos saber cuantos elementos posee nuestro arreglo ahora es posible con length
+console.log(entries.length);
+
+
+
+//Objetc Values: Me devuelve los valores de un objeto a un arreglo. 
+
+
+const data= {
+    front:'Alej',
+    back: 'Rel'
+}
+
+const values = Object.values(data);
+console.log(values);
+
+// Padding: nos permite añadir cadenas vacías a string, pudiendo modificar la cadena string como tal.
+//Podría servir del lado del front , para mostrar una estructura de elementos.
+
+const string ='hello';
+console.log(string.padStart(7,'hi')) // se añade al inicio la palabra 'hi'
+console.log(string.padEnd(12,'hi')) // Se añade al final la palabra 'hi'
+
+
+//Trailing comas, nos permite asignar elementos al objeto mediante comas.
+const data= {
+    front:'Alej', // Puede existir
+    back: 'Rel'
+}
