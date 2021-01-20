@@ -158,3 +158,45 @@ helloPromise()
     .then(Response => console.log(Response))
     .catch(error=> console.log(error));
    
+
+
+    /* Classes
+    */
+   class Calculator {
+     constructor() {
+       this.valueA = 0;
+       this.valueB = 0;
+     }
+   
+     sum(valueA, valueB) {
+       this.valueA = valueA;
+       this.valueB = valueB;
+       return this.valueA + this.valueB;
+     }
+   }
+   
+   const calc = new Calculator();
+   console.log('Calc Result -> ', calc.sum(2, 3));
+   
+   /**
+    * Modules
+    */
+   import { hello } from './class4-module.js';
+   console.log('Hello Module -> ', hello());
+   
+   /**
+    * Generators
+    */
+   function* helloWorld() {
+     if (true) {
+       yield 'Hello, ';
+     }
+   
+     if (true) {
+       yield 'World!';
+     }
+   }
+   const generatorHello = helloWorld();
+   console.log('generatorHello first call -> ', generatorHello.next().value);
+   console.log('generatorHello second call -> ', generatorHello.next().value);
+   console.log('generatorHello third call -> ', generatorHello.next().value);
